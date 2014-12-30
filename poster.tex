@@ -25,6 +25,7 @@
 \listfiles
 \newcommand*{\signstream}{SignStream\texttrademark\xspace}
 
+\newcommand{\jri}[1]{\textcolor{blue}{ \emph{\scriptsize  #1}} }
 
 % Display a grid to help align images
 %\beamertemplategridbackground[1cm]
@@ -70,59 +71,30 @@
               regions of the genome, for which selection is less
               likely to impact evolution. Next, diversity surrounding
               different classes of sites was evaluated to gauge the
-              general selective forces governing domestication.
+              general selective forces governing domestication. 
               \begin{center}
               \pgfdeclareimage[height=15cm]{locales}{allSamples}
               \pgfuseimage{locales}
               \end{center}
             \end{block}
             \vfill
-            \begin{block}{SFS Demonstrates that genes are not evolving
-              neutrally}
-            By sequencing entire maize and teosinte genomes, it is
-            possible to evaluate patterns of diversity both within,
-            and outside of, genic regions. As depicted via the site
-            frequency spectrum (SFS) and Tajima's D in the plots
-            below, such an evaluation demonstrates that genic regions
-            are not evolving neutrally. Instead, gene evolution is
-            constrained, likely by selection, and therefore
-            demographic patterns inferred from these sites are likely
-            to be biased.
-            \\
-              \begin{columns}
-                \column{.5\textwidth}
-                  \centering
-                  \pgfdeclareimage[height=10cm]{maizeSFS}{SFS_maize_compare}
-                  \pgfuseimage{maizeSFS}\\
-                  \pgfdeclareimage[height=10cm]{maizeTajima}{BKN_TajimaHist}
-                  \pgfuseimage{maizeTajima}
-                \column{.5\textwidth}
-                  \centering
-                  \pgfdeclareimage[height=10cm]{teoSFS}{SFS_teosinte_compare}
-                  \pgfuseimage{teoSFS}\\
-                  \pgfdeclareimage[height=10cm]{teoTajima}{TIL_TajimaHist}
-                  \pgfuseimage{teoTajima}
-              \end{columns}
-              \vskip-1ex
-            \end{block}
-            \vfill
-
-            \begin{block}{Diffusion approximation to estimate demographic parameters}
+ \begin{block}{Demography of maize domestication}
               \begin{columns}
               \column{0.4\textwidth}
               \begin{itemize}
                 \item Model estimated with
-                  $\pmb{\delta}a\pmb{\delta}i$ (Gutenkunst et al., 2009).
-                \item Estimated demographic parameters with nongenic DNA.
-                \item 412 million positions sequenced.
-                \item Modern $N_{maize}$ likely an underestimate.
+                  $\pmb{\delta}a\pmb{\delta}i$ (Gutenkunst et al., 2009) using nongenic SNPs.
+              %  \item Estimated demographic parameters with nongenic DNA.
+              %   \item 412 million positions sequenced.
+                \item Bottleneck involved $N_e$ only $\sim 6\%$ of teosinte.
+\item Current maize $N_e$ much larger than teosinte, and likely an underestimate.
                 \item[]
               \end{itemize}
-              \begin{center}
-              \pgfdeclareimage[height=10cm]{dadi}{2d_modelComparison_folded_fixedTeo}
-              \pgfuseimage{dadi}\\
-              \small{\textbf{Data and Model SFS}}
-              \end{center}
+          %    \begin{center}
+          %    \pgfdeclareimage[height=10cm]{dadi}{2d_modelComparison_folded_fixedTeo}
+           %   \pgfuseimage{dadi}\\
+           %   \small{\textbf{Data and Model SFS}}
+           %   \end{center}
               \column{0.6\textwidth}
               \begin{tikzpicture}
 %                \draw[step=1cm,gray,very thin] (0,0) grid (25,20);
@@ -153,6 +125,37 @@
               \end{tikzpicture}
               \end{columns}
             \end{block}
+\vfill
+            \begin{block}{Genes are not evolving 
+              neutrally}
+           %By sequencing entire maize and teosinte genomes, it is
+         %   possible to evaluate patterns of diversity both within,
+%            and outside of, genic regions. As depicted via the site
+%            frequency spectrum (SFS) and Tajima's D in the plots
+%            below, such an evaluation demonstrates that genic regions
+%            are not evolving neutrally. Instead, gene evolution is
+%            constrained, likely by selection, and therefore
+%            demographic patterns inferred from these sites are likely
+%            to be biased.
+            \\
+              \begin{columns}
+                \column{.5\textwidth}
+                  \centering
+                  \pgfdeclareimage[height=10cm]{maizeSFS}{SFS_maize_compare}
+                  \pgfuseimage{maizeSFS}\\
+                  \pgfdeclareimage[height=10cm]{maizeTajima}{BKN_TajimaHist}
+                  \pgfuseimage{maizeTajima}
+                \column{.5\textwidth}
+                  \centering
+                  \pgfdeclareimage[height=10cm]{teoSFS}{SFS_teosinte_compare}
+                  \pgfuseimage{teoSFS}\\
+                  \pgfdeclareimage[height=10cm]{teoTajima}{TIL_TajimaHist}
+                  \pgfuseimage{teoTajima}
+              \end{columns}
+ Genome-wide site frequency spectra show a paucity of low frequency alleles in genes compared to nongenic regions.  Because demographic processes should impact the whole genome similarly, this suggest the action of purifying selection removing diversity in genes. 
+              \vskip-1ex
+            \end{block}
+       
             \vspace{6cm}
             }
         \end{minipage}
@@ -170,23 +173,21 @@
             % Since all columns are the same length, it is all nice and tidy.  You have to get the height empirically
             % ---------------------------------------------------------%
             % fill each column with content
-            \begin{block}{Evaluating the abundance of hard sweeps}
+            \begin{block}{Few classical hard sweeps in \emph{Zea mays}}
               \begin{columns}
               \column{.4\textwidth}
               \begin{itemize}
-                \item Reduced diversity surrounding synonymous and
-                  nonsynonymous substitutions provides insight into
-                  hard sweeps.
+ %               \item Reduced diversity surrounding synonymous and
+%                  nonsynonymous substitutions provides insight into
+%                  hard sweeps.
+%                \item[]
+                \item Synonymous and nonsynonymous substitutions show similar reductions in diversity. % reductions for both classes suggest
+               %   hard sweeps were not frequent during domestication
+               %   \begin{itemize}
+                %    \item Trend observed for both maize and teosinte
+               %   \end{itemize}
                 \item[]
-                \item Comparable reductions for both classes suggest
-                  hard sweeps were not frequent during domestication
-                  \begin{itemize}
-                    \item Trend observed for both maize and teosinte
-                  \end{itemize}
-                \item[]
-                \item For both classes of substitution, teosinte
-                  variability further reduced than maize, relative to
-                  total diversity.
+                \item Diversity around both classes of substitution shows greater reduction in teosinte than maize.
               \end{itemize}
                 \column{.6\textwidth}
               \centering
@@ -195,7 +196,7 @@
               \end{columns}
             \end{block}
             \vfill
-            \begin{block}{Intensity of purifying selection at different time-scales}
+            \begin{block}{Demography changes strength of purifying selection.}
               \begin{columns}
               \column{.6\textwidth}
               \centering
@@ -209,27 +210,27 @@
                   and near genes.
                 \item[]
                 \item Teosinte displays a greater reduction of pairwise diversity near
-                  genes than does maize (top).
-                  \begin{itemize}
-                    \item Suggests stronger effect of purifying
-                      selection over a long time-frame.
-                  \end{itemize}
+                  genes than does maize (top), reflecting long-term differences in $N_e$.
+       %           \begin{itemize}
+        %            \item Suggests stronger effect of purifying
+         %             selection over a long time-frame.
+          %        \end{itemize}
                 \item[]
                 \item Maize displays a greater reduction in singleton
-                  diversity near genes than does teosinte (bottom).
-                  \begin{itemize}
-                    \item Suggests stronger effect of purifying
-                      selection in the recent past.
-                  \end{itemize}
+                  diversity near genes than does teosinte (bottom), reflecting larger recent $N_e$ in maize.
+  %                \begin{itemize}
+  %                  \item Suggests stronger effect of purifying
+  %                    selection in the recent past.
+   %               \end{itemize}
                 \item[]
-                \item Results demonstrate that purifying selection plays a
-                  substantial roll in the evolution of both taxa.
-                \item[]
-                \item Observations consistent with a reduced
-                  efficiency of selection during maize bottleneck, when
-                  maize population size was small, followed by
-                  increased efficiency of purifying selection after
-                  population expanded.
+   %             \item Results demonstrate that purifying selection plays a
+   %               substantial roll in the evolution of both taxa.
+   %             \item[]
+                \item Maize domestication bottleneck reduced efficacy of purifying selection, but large $N_e$ post-expansion leads to stronger purifying selection on recent mutations.  %makesObservations consistent with a reduced
+  %                efficiency of selection during maize bottleneck, when
+   %               maize population size was small, followed by
+    %              increased efficiency of purifying selection after
+     %             population expanded.
               \end{itemize}
               \end{columns}
             \end{block}
