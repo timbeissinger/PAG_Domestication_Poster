@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  31 DEC 2014 15:28
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  6 JAN 2015 16:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -809,8 +809,10 @@ beamerposter: checking orientation input, please wait.
 beamerposter: the input portrait\ 0\ was correct, we proceed.
 beamerposter: finished orientation check.
 beamerposter: checking size input, please wait.
-beamerposter: the input a0\ 1\ was correct, we proceed.
+beamerposter: the input custom\ 6\ was correct, we proceed.
 beamerposter: finished size input check.
+beamerposter: custom poster height=113
+beamerposter: custom poster width=84.1
 beamerposter: myfontscale=1.3
 beamerposter: enabled debug mode
 (/usr/local/texlive/2013/texmf-dist/tex/latex/fp/fp.sty
@@ -862,9 +864,29 @@ Package: fp-upn 1996/10/21
 Package: fp-eval 1995/04/03
 ))
 \tmp=\dimen186
-
-beamerposter: paperwidth=2388.89357pt, paperheight=3380.75665pt
-beamerposter: textwidth=2360.44081pt, textwidth=3352.3039pt
+ ( FP-UPN
+FP debug: upn: +++ computing upn-expression "1 customwidth -"
+FP debug: upn: calculating "1"
+FP debug: upn: result      "1"
+FP debug: upn: calculating "customwidth"
+FP debug: upn: result      "84.1"
+FP debug: upn: calculating "84.1 sub 1"
+( FP-SUB )
+FP debug: upn: result      "83.100000000000000000"
+FP debug: upn: +++ result of upn-expression is "(83.100000000000000000)"
+) ( FP-UPN
+FP debug: upn: +++ computing upn-expression "1 customheight -"
+FP debug: upn: calculating "1"
+FP debug: upn: result      "1"
+FP debug: upn: calculating "customheight"
+FP debug: upn: result      "113"
+FP debug: upn: calculating "113 sub 1"
+( FP-SUB )
+FP debug: upn: result      "112.000000000000000000"
+FP debug: upn: +++ result of upn-expression is "(112.000000000000000000)"
+)
+beamerposter: paperwidth=2392.87694pt, paperheight=3215.1614pt
+beamerposter: textwidth=2364.42418pt, textwidth=3186.70865pt
 ( FP-UPN
 FP debug: upn: +++ computing upn-expression "myfontscale fontSizeX * 2 round"
 FP debug: upn: calculating "myfontscale"
@@ -1444,12 +1466,12 @@ File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: includehead includefoot 
-* h-part:(L,W,R)=(28.45274pt, 2331.98808pt, 28.45274pt)
-* v-part:(T,H,B)=(0.0pt, 3380.75665pt, 0.0pt)
-* \paperwidth=2388.89357pt
-* \paperheight=3380.75665pt
-* \textwidth=2331.98808pt
-* \textheight=3352.30392pt
+* h-part:(L,W,R)=(28.45274pt, 2335.97145pt, 28.45274pt)
+* v-part:(T,H,B)=(0.0pt, 3215.1614pt, 0.0pt)
+* \paperwidth=2392.87694pt
+* \paperheight=3215.1614pt
+* \textwidth=2335.97145pt
+* \textheight=3186.70868pt
 * \oddsidemargin=-43.81725pt
 * \evensidemargin=-43.81725pt
 * \topmargin=-72.26999pt
@@ -1601,7 +1623,7 @@ File: expanded_logo_gold.png Graphic file (type png)
 
 <use expanded_logo_gold.png>
 Package pdftex.def Info: expanded_logo_gold.png used on input line 51.
-(pdftex.def)             Requested size: 537.49739pt x 152.01117pt.
+(pdftex.def)             Requested size: 538.39365pt x 152.26375pt.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <15.6> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 51.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <55.9> not available
@@ -1623,48 +1645,48 @@ LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <27.17387> not available
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <19.41> not available
 (Font)              Font shape `OT1/phv/m/sl' tried instead on input line 51.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <32.34> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 270.
-LaTeX Font Info:    Calculating math sizes for size <18.72> on input line 270.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 279.
+LaTeX Font Info:    Calculating math sizes for size <18.72> on input line 279.
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <18.72> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 270.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 279.
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <13.10394> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 270.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 279.
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <9.36> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 270.
-LaTeX Font Info:    Calculating math sizes for size <32.34> on input line 270.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 279.
+LaTeX Font Info:    Calculating math sizes for size <32.34> on input line 279.
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <32.34> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 270.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 279.
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <22.6379> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 270.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 279.
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <16.17> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 270.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 279.
 
-Overfull \hbox (25.3706pt too wide) in paragraph at lines 270--270
+Overfull \hbox (25.3706pt too wide) in paragraph at lines 279--279
 [][] 
  []
 
 LaTeX Font Info:    Font shape `OT1/phv/bx/it' in size <32.34> not available
-(Font)              Font shape `OT1/phv/b/it' tried instead on input line 270.
+(Font)              Font shape `OT1/phv/b/it' tried instead on input line 279.
 LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <32.34> not available
-(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 270.
+(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 279.
 
-Overfull \hbox (2.50812pt too wide) in paragraph at lines 270--270
+Overfull \hbox (1.39554pt too wide) in paragraph at lines 279--279
  [] 
  []
 
 
-Overfull \hbox (25.3706pt too wide) in paragraph at lines 270--270
+Overfull \hbox (25.3706pt too wide) in paragraph at lines 279--279
 [][] 
  []
 
 
-Overfull \vbox (156.43118pt too high) detected at line 270
+Overfull \vbox (179.76265pt too high) detected at line 279
  []
 
 File: expanded_logo_gold.png Graphic file (type png)
 <use expanded_logo_gold.png>
-Package pdftex.def Info: expanded_logo_gold.png used on input line 270.
-(pdftex.def)             Requested size: 537.49739pt x 152.01117pt.
+Package pdftex.def Info: expanded_logo_gold.png used on input line 279.
+(pdftex.def)             Requested size: 538.39365pt x 152.26375pt.
  [1{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
  <./expanded_logo_gold.png> <./allSamples.pdf> <./SFS_maize_compare.pdf> <./BKN
@@ -1681,10 +1703,10 @@ tons.png>]
 \tf@snm=\write8
 \openout8 = `poster.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 271.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 271.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 280.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 280.
  (./poster.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 271.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 280.
 
 
  *File List*
@@ -1849,16 +1871,16 @@ expanded_logo_gold.png    Graphic file (type png)
 expanded_logo_gold.png    Graphic file (type png)
  ***********
 
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 271.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 280.
 Package rerunfilecheck Info: File `poster.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 271.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 280.
  ) 
 Here is how much of TeX's memory you used:
- 21144 strings out of 493315
- 390264 string characters out of 6137904
- 546463 words of memory out of 5000000
- 24049 multiletter control sequences out of 15000+600000
+ 21146 strings out of 493315
+ 390295 string characters out of 6137904
+ 550676 words of memory out of 5000000
+ 24051 multiletter control sequences out of 15000+600000
  54220 words of font info for 131 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  49i,23n,66p,410b,1738s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1872,10 +1894,10 @@ texlive/2013/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/
 xmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2013/texmf-di
 st/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist/font
 s/type1/urw/helvetic/uhvro8a.pfb>
-Output written on poster.pdf (1 page, 2474092 bytes).
+Output written on poster.pdf (1 page, 2493665 bytes).
 PDF statistics:
- 120 PDF objects out of 1000 (max. 8388607)
- 83 compressed objects within 1 object stream
+ 135 PDF objects out of 1000 (max. 8388607)
+ 94 compressed objects within 1 object stream
  3 named destinations out of 1000 (max. 500000)
  88 words of extra memory for PDF output out of 10000 (max. 10000000)
 
