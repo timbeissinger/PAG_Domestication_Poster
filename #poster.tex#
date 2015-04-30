@@ -1,0 +1,287 @@
+\documentclass[final]{beamer}
+\mode<presentation>
+{
+  \usetheme{Icy}
+}
+\usepackage{times}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{sfmath} % for sans serif math fonts; wget http://dtrx.de/od/tex/sfmath.sty
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
+%\usepackage[size=custom,height=150,width=90,scale=1.3]{beamerposter}
+\usepackage[orientation=portrait,size=custom,height=113,width=84.1,scale=1.3,debug]{beamerposter}
+\usepackage{booktabs,array}
+\usepackage{listings}
+\usepackage{xspace}
+\usepackage{fp}
+\usepackage{ifthen}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{pgf}
+\usepackage{ragged2e}
+\usetikzlibrary{arrows}
+
+\listfiles
+\newcommand*{\signstream}{SignStream\texttrademark\xspace}
+
+\newcommand{\jri}[1]{\textcolor{blue}{ \emph{\scriptsize  #1}} }
+
+% Display a grid to help align images
+%\beamertemplategridbackground[1cm]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\graphicspath{{figures/}}
+
+\title{\huge Patterns of Demography and Selection During and Since
+  Maize Domestication}
+\author{Timothy Beissinger \inst{1} and Jeffrey Ross-Ibarra
+  \inst{1,2,3}}
+\institute[UC Davis]{ \inst{1}Department of Plant Sciences, University of
+  California, Davis\\ \inst{2} Center for Population Biology, UC Davis\\
+  \inst{3} Genome Center, UC Davis}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newlength{\columnheight}
+\setlength{\columnheight}{100cm}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{frame}
+  \begin{columns}
+    % ---------------------------------------------------------%
+    % Set up a column
+    \begin{column}{.49\textwidth}
+      \begin{beamercolorbox}[center,wd=\textwidth]{postercolumn}
+        \begin{minipage}[T]{.95\textwidth}  % tweaks the width, makes a new \textwidth
+          \parbox[t][\columnheight]{\textwidth}{ % must be some better way to set the the height, width and textwidth simultaneously
+            % Since all columns are the same length, it is all nice and tidy.  You have to get the height empirically
+            % ---------------------------------------------------------%
+            % fill each column with content
+            \begin{block}{Introduction}
+              The demographic history and selective patterns
+              experienced by a population govern genetic diversity
+              within that population. This is especially true for
+              domesticated species, which tend to have encountered
+              vastly different demographic and selective forces than
+              their wild progenitors. In the case of maize, a more complete
+              understanding of modern genetic variability can be
+              achieved by evaluating this variability in the context
+              of its wild ancestor teosinte. We employed
+              whole genome sequence data from 23 maize and 13 teosinte
+              samples from Maize HapMap2 [1] to investigate genetic patterns
+              resulting from the domestication process. Parameters of
+              domestication were inferred from non-genic
+              regions of the genome, for which selection is less
+              likely to impact evolution. Next, diversity surrounding
+              different classes of sites was evaluated to gauge the
+              general selective forces governing domestication.
+              \begin{center}
+              \vspace{1cm}
+              \pgfdeclareimage[height=15cm]{locales}{allSamples}
+              \pgfuseimage{locales}
+              \end{center}
+            \end{block}
+            \vfill
+ \begin{block}{Demography of maize domestication}
+              \begin{columns}
+              \column{0.4\textwidth}
+              \begin{itemize}
+                \item Model estimated with
+                  $\pmb{\delta}a\pmb{\delta}i$[2] using nongenic SNPs.
+                \item[]
+              %  \item Estimated demographic parameters with nongenic DNA.
+              %   \item 412 million positions sequenced.
+                \item Bottleneck involved $N_e$ only $\sim 6\%$ of
+                  teosinte.
+                \item[]
+\item Current maize $N_e$ much larger than teosinte, and likely an underestimate.
+                \item[]
+              \end{itemize}
+          %    \begin{center}
+          %    \pgfdeclareimage[height=10cm]{dadi}{2d_modelComparison_folded_fixedTeo}
+           %   \pgfuseimage{dadi}\\
+           %   \small{\textbf{Data and Model SFS}}
+           %   \end{center}
+              \column{0.6\textwidth}
+              \begin{tikzpicture}
+%                \draw[step=1cm,gray,very thin] (0,0) grid (25,20);
+                \draw[thick] (0,20) -- (0,0);
+                \draw[thick] (6,20) -- (6,11) -- (16,11) -- (16,9);
+                \draw[thick] (6,9) -- (14,9);
+                \draw[thick] (6,9) -- (6,0);
+                \draw[thick] (9,0) to [out=20, in =270] (14,9);
+                \draw[thick] (20,0) to [out =160, in =270] (16,9);
+                \draw[thick] (-2,9) -- node[below,rotate=90,scale=0.75] {$T_b
+                  \approx 15k$ gens} (-2,0);
+                \draw[thick] (-2.5,9) -- (-1.5,9);
+                \draw[thick] (-2.5,0) -- (-1.5,0);
+                \draw[thick,->,line width=3pt] (11.5,7) -- node[below,
+                scale=0.75pt]
+                {$m_{mt} \approx 0.12$}
+                (7.5,7);
+                \draw[thick,<-,line width=3pt] (11.5,4) -- node[above,
+                scale=0.75pt]
+                {$m_{tm} \approx 1.25$} (7.5,4);
+                \fill[blue!50!white] (18.5,15) -- node[rotate=90, black,
+                above] {Time} (18.5,5) -- (18,5) --  (19,4)
+                -- (20,5) -- (19.5,5) -- (19.5,15) -- (18.5,15);
+                \node[scale=0.75pt] at (3,18) {$N_a \approx 123k$};
+                \node[scale=0.75pt] at (3,1) {$N_{teo} = N_a$};
+                \node[scale=0.75pt] at (15,1) {$N_{maize} \approx 3N_a$};
+                \node[scale=0.75pt] at (13,10) {$N_{bot} \approx 0.06N_a$};
+              \end{tikzpicture}
+              \end{columns}
+            \end{block}
+\vfill
+            \begin{block}{Genes are not evolving
+              neutrally}
+           %By sequencing entire maize and teosinte genomes, it is
+         %   possible to evaluate patterns of diversity both within,
+%            and outside of, genic regions. As depicted via the site
+%            frequency spectrum (SFS) and Tajima's D in the plots
+%            below, such an evaluation demonstrates that genic regions
+%            are not evolving neutrally. Instead, gene evolution is
+%            constrained, likely by selection, and therefore
+%            demographic patterns inferred from these sites are likely
+%            to be biased.
+%            \\
+              \begin{columns}
+                \column{.5\textwidth}
+                  \centering
+                  \pgfdeclareimage[height=9cm]{maizeSFS}{SFS_maize_compare}
+                  \pgfuseimage{maizeSFS}\\
+                  \pgfdeclareimage[height=9cm]{maizeTajima}{BKN_TajimaHist}
+                  \pgfuseimage{maizeTajima}
+                \column{.5\textwidth}
+                  \centering
+                  \pgfdeclareimage[height=9cm]{teoSFS}{SFS_teosinte_compare}
+                  \pgfuseimage{teoSFS}\\
+                  \pgfdeclareimage[height=9cm]{teoTajima}{TIL_TajimaHist}
+                  \pgfuseimage{teoTajima}
+              \end{columns}
+ Genome-wide site frequency spectra show a paucity of low frequency alleles in genes compared to nongenic regions.  Because demographic processes should impact the whole genome similarly, this suggest the action of purifying selection removing diversity in genes.
+              \vskip-1ex
+            \end{block}
+
+            \vspace{6cm}
+            }
+        \end{minipage}
+      \end{beamercolorbox}
+    \end{column}
+    % ---------------------------------------------------------%
+    % end the column
+
+    % ---------------------------------------------------------%
+    % Set up a column
+    \begin{column}{.49\textwidth}
+      \begin{beamercolorbox}[center,wd=\textwidth]{postercolumn}
+        \begin{minipage}[T]{.95\textwidth} % tweaks the width, makes a new \textwidth
+          \parbox[t][\columnheight]{\textwidth}{ % must be some better way to set the the height, width and textwidth simultaneously
+            % Since all columns are the same length, it is all nice and tidy.  You have to get the height empirically
+            % ---------------------------------------------------------%
+            % fill each column with content
+            \begin{block}{Few classical hard sweeps in \emph{Zea mays}}
+              \begin{columns}
+              \column{.4\textwidth}
+              \begin{itemize}
+ %               \item Reduced diversity surrounding synonymous and
+%                  nonsynonymous substitutions provides insight into
+%                  hard sweeps.
+%                \item[]
+                \item Synonymous and nonsynonymous substitutions show similar reductions in diversity. % reductions for both classes suggest
+               %   hard sweeps were not frequent during domestication
+               %   \begin{itemize}
+                %    \item Trend observed for both maize and teosinte
+               %   \end{itemize}
+                \item[]
+                \item[]
+                \item[]
+                \item Diversity around both classes of substitution shows greater reduction in teosinte than maize.
+              \end{itemize}
+                \column{.6\textwidth}
+              \centering
+              \pgfdeclareimage[height=22.98cm]{hard}{plotDiversity_TvT_vs_TvM_including_noncoding_NORMALIZED_panels_Folded2}
+              \pgfuseimage{hard}
+              \end{columns}
+            \end{block}
+            \vfill
+            \begin{block}{Demography changes strength of purifying selection.}
+              \begin{columns}
+              \column{.6\textwidth}
+              \centering
+              \pgfdeclareimage[height=20cm]{pi}{distanceToGene_WithSignificance_Folded2}
+              \pgfuseimage{pi}\\
+              \pgfdeclareimage[height=20cm]{singletons}{distanceToGene_WithSignificance_Singletons}
+              \pgfuseimage{singletons}
+              \column{.4\textwidth}
+              \begin{itemize}
+                \item Purifying selection reduces genetic diversity in
+                  and near genes.
+                \item[]
+                \item Teosinte displays a greater reduction of pairwise diversity near
+                  genes than does maize (top), reflecting long-term differences in $N_e$.
+       %           \begin{itemize}
+        %            \item Suggests stronger effect of purifying
+         %             selection over a long time-frame.
+          %        \end{itemize}
+                \item[]
+                \item Maize displays a greater reduction in singleton
+                  diversity near genes than does teosinte (bottom), reflecting larger recent $N_e$ in maize.
+  %                \begin{itemize}
+  %                  \item Suggests stronger effect of purifying
+  %                    selection in the recent past.
+   %               \end{itemize}
+                \item[]
+   %             \item Results demonstrate that purifying selection plays a
+   %               substantial roll in the evolution of both taxa.
+   %             \item[]
+                \item Maize domestication bottleneck reduced efficacy of purifying selection, but large $N_e$ post-expansion leads to stronger purifying selection on recent mutations.  %makesObservations consistent with a reduced
+  %                efficiency of selection during maize bottleneck, when
+   %               maize population size was small, followed by
+    %              increased efficiency of purifying selection after
+     %             population expanded.
+              \end{itemize}
+              \end{columns}
+            \end{block}
+            \vfill
+            \begin{block}{References and acknowledgements}
+            \begin{itemize}
+              \item[[1]] Chia et al., Maize HapMap2 identifies extant
+                variation from a genome in flux. Nature Genetics,
+                2012.
+              \item[[2]] Gutenkunst et al., Inferrring the joint
+                demographic history of multiple populations from
+                multidimensional SNP data. PLoS Genetics, 2009.
+              \item[]
+              \end{itemize}
+            \begin{itemize}
+              \item[] We acknowledge and are grateful for funding from NSF (Proposal \#1238014).
+            \end{itemize}
+            \end{block}
+            \vspace{6cm}
+          }
+          % ---------------------------------------------------------%
+          % end the column
+        \end{minipage}
+      \end{beamercolorbox}
+    \end{column}
+    % ---------------------------------------------------------%
+    % end the column
+  \end{columns}
+  \vskip1ex
+  %\tiny\hfill\textcolor{ta2gray}{Created with \LaTeX \texttt{beamerposter}  \url{http://www-i6.informatik.rwth-aachen.de/~dreuw/latexbeamerposter.php}}
+  %\tiny\hfill{Created with \LaTeX \texttt{beamerposter}
+  %\url{http://www-i6.informatik.rwth-aachen.de/~dreuw/latexbeamerposter.php}
+  %\hskip1em}
+\end{frame}
+\end{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-PDF-mode: t
+%%% End:
